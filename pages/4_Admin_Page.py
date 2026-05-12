@@ -95,7 +95,7 @@ else:
                 overflow-x: auto;
             }
             div[data-testid="stVerticalBlock"]:has(#requests-scroll-anchor) div[data-testid="stHorizontalBlock"] {
-                min-width: 1300px;
+                min-width: 2100px;
                 flex-wrap: nowrap;
             }
             </style>
