@@ -32,6 +32,24 @@ users = pd.read_csv(USERS_FILE)
 st.subheader("Registered Users")
 st.dataframe(users, use_container_width=True)
 
+st.subheader("Doctors List")
+from doctor_list import DOCTOR_DIRECTORY
+
+# Convert DOCTOR_DIRECTORY to a DataFrame
+doctors_data = []
+for disease, details in DOCTOR_DIRECTORY.items():
+    doctors_data.append({
+        "Disease": disease,
+        "Doctor Name": details["doctor_name"],
+        "Specialty": details["specialty"],
+        "Contact": details["contact"]
+    })
+
+doctors_df = pd.DataFrame(doctors_data)
+# Remove duplicates based on Doctor Name to show unique doctors
+unique_doctors = doctors_df.drop_duplicates(subset=["Doctor Name"]).reset_index(drop=True)
+st.dataframe(unique_doctors, use_container_width=True)
+
 st.subheader("Change User Roles")
 
 if users.empty:
