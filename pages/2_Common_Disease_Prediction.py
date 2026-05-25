@@ -406,6 +406,9 @@ if submitted:
         4. Whether doctor consultation is needed
         '''
 
-        answer = ask_ai(prompt)
-
-        st.success(answer)
+        try:
+            answer = ask_ai(prompt)
+        except RuntimeError as exc:
+            st.error(str(exc))
+        else:
+            st.success(answer)

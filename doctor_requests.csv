@@ -1,2 +1,4 @@
 timestamp,patient_name,patient_age,patient_gender,page,predicted_disease
-2026-05-12 21:30:55,bhumi,20,Female,Common Disease Prediction,Cold
+2026-05-13 21:48:11,Bhumika,22,Female,Common Disease Prediction,Heart Disease
+2026-05-25 21:05:22,bhumi,20,Female,Common Disease Prediction,Malaria
+2026-05-25 21:06:30,bhumi,20,Female,Liver Disease Prediction,Possible Liver Dysfunction
